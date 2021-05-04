@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>My hobbies</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+	<header>
+		<a href="#" class="logo">Project</a>
+		<ul>
+			<li><a href="#" class="active">Home</a></li>
+			<li><a href="#">About</a></li>
+			<li><a href="#">Work</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</header>
+    <section>
+    	<img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+    	<img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Hobbies</h2>
+    	<a href="#sec" id="btn">To my hobbies</a>
+    	<img src="mountains_front.png" id="mountains_front">
+    </section>
+    
+
+    <div class="sec" id="sec">
+        <h2>My hobbies:</h2>
+        <div class="container">
+    	<div class="box">
+    		<span></span>
+    		<div class="content">
+    			<h2>Programming</h2>
+    			<img src="code.jpg" class="img1" width="250px">
+    			<p>I don't know why, but I like to program.<br><br>You will tell why? It is cool!</p>
+    			
+    		</div>
+    	</div>
+    	<div class="box">
+    		<span></span>
+    		<div class="content">
+    			<h2>Sport</h2>
+    			<img src="sport.jpg" class="img1" width="250px">
+    			<p>Since childhood, I loved to run and jump.<br> I was a hyper active boy, I still am.</p>
+    		</div>
+    	</div>
+        <div class="box">
+    		<span></span>
+    		<div class="content">
+    			<h2>Cyber sport</h2>
+    			<img src="game.jpg" class="img1" width="250px">
+    			<p>Also since the childhood I played computer games, sometimes for 4 hours a day. </p>
+    			
+    		</div>
+    	</div>
+    </div>
+    </div>
+    </div>
+    
+    <footer>
+		<div class="footer-content">
+			<h3>My hobbies</h3>
+			<p>This site was written by a very smart boy</p>
+			<ul class="socials">
+			    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			    <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+			    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+		    </ul>
+		</div>
+        <div class="footer-bottom">
+        	<p>&copy;2020. And wrote this site <span>Roma</span></p>
+        </div>	
+ 
+
+	</footer>
+
+    <script>
+    	let stars = document.getElementById('stars');
+    	let moon = document.getElementById('moon');
+    	let mountains_behind = document.getElementById('mountains_behind');
+    	let text = document.getElementById('text');
+    	let btn = document.getElementById('btn');
+    	let mountains_front = document.getElementById('mountains_front');
+        let header = document.querySelector('header');
+    	
+    	window.addEventListener('scroll', function(){
+    		let value = window.scrollY;
+    		stars.style.left = value * 0.25 + 'px';
+    		moon.style.top = value * 1.05 + 'px';
+    		mountains_behind.style.top = value * 0.5 + 'px';
+    		mountains_front.style.top = value * 0 + 'px';
+    		text.style.marginRgiht = value * 4 + 'px';
+    		text.style.marginTop = value * 1.5 + 'px';
+    		btn.style.marginTop = value * 1.5 + 'px';
+    		header.style.top = value * 0.5 + 'px';
+    	})
+    
+
+    </script>
+</body>
+</html>
